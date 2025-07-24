@@ -1,0 +1,143 @@
+.page {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #f5f1ec; /* beige clair, élégant */
+  color: #2b1c17; /* texte plus doux */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.decoratedTitle {
+  font-size: 2.6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.decoratedTitle::before,
+.decoratedTitle::after {
+  content: "—";
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 1rem;
+  opacity: 0.6;
+}
+
+/* Grille colonne centrée */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Carte raffinée */
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: #3b2a26;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* image à gauche ou droite en alternance */
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.image {
+  width: 45%;
+  object-fit: cover;
+  height: auto;
+}
+
+.cardContent {
+  width: 55%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cardContent p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footerLink {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  color: #e6e0db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e0db;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+.topLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.inlineLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+  margin-right: 1rem;
+}
+.cardArabica {
+  background-color: #f3e5ab; /* doré/beige élégant */
+}
+
+.cardRobusta {
+  background-color: #e0c8b0; /* marron clair chaleureux */
+}
+
+.cardLiberica {
+  background-color: #d3bfa4; /* café latte doux */
+}
+
+.cardExcelsa {
+  background-color: #dbc3a1; /* ton clair vanillé */
+}

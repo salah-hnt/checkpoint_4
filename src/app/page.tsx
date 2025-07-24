@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className={styles.hero}>
         <Image
-          src="/cofee picture/photo cafe immersif.png"
+          src="/cofee_picture/photo cafe immersif.png"
           alt="Image immersive de café"
           fill
           className={styles.image}
