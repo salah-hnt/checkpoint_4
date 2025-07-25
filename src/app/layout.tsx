@@ -16,7 +16,6 @@ const lora = Lora({
   variable: "--font-lora",
 });
 
-// Polices de base (déjà présentes, que tu peux garder si utiles)
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

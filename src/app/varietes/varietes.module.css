@@ -1,8 +1,8 @@
 .page {
   min-height: 100vh;
   padding: 4rem 2rem;
-  background-color: #f5f1ec; /* beige clair, élégant */
-  color: #2b1c17; /* texte plus doux */
+  background-color: #f5f1ec;
+  color: #2b1c17;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -13,7 +13,7 @@
   font-size: 2.6rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: #fff;
+  color: #444242;
   position: relative;
 }
 
@@ -21,12 +21,11 @@
 .decoratedTitle::after {
   content: "—";
   font-size: 2rem;
-  color: #fff;
+  color: #2b1c17;
   margin: 0 1rem;
   opacity: 0.6;
 }
 
-/* Grille colonne centrée */
 .grid {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,6 @@
   max-width: 1000px;
 }
 
-/* Carte raffinée */
 .card {
   display: flex;
   flex-direction: row;
@@ -50,7 +48,6 @@
   transform: scale(1.02);
 }
 
-/* image à gauche ou droite en alternance */
 .card:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -91,7 +88,7 @@
   position: relative;
   display: inline-block;
   font-size: 1rem;
-  color: #e6e0db;
+  color: #2b1c17;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -101,7 +98,7 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #e6e0db;
+  background-color: #2b1c17;
   bottom: -2px;
   left: 0;
   transform: scaleX(0);
@@ -127,17 +124,17 @@
   margin-right: 1rem;
 }
 .cardArabica {
-  background-color: #f3e5ab; /* doré/beige élégant */
+  background-color: #f3e5ab;
 }
 
 .cardRobusta {
-  background-color: #e0c8b0; /* marron clair chaleureux */
+  background-color: #e0c8b0;
 }
 
 .cardLiberica {
-  background-color: #d3bfa4; /* café latte doux */
+  background-color: #d3bfa4;
 }
 
 .cardExcelsa {
-  background-color: #dbc3a1; /* ton clair vanillé */
+  background-color: #dbc3a1;
 }

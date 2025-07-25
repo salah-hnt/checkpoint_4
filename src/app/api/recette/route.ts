@@ -7,6 +7,17 @@ export async function GET() {
   return NextResponse.json({ recipes });
 }
 
-export const POST = async () => {
-  return new NextResponse("not authorized");
-};
+export async function DELETE(request: Request) {
+  const { id } = await request.json();
+  if (!id) {
+    return NextResponse.json(
+      { error: "Recipe ID is required" },
+      { status: 400 }
+    );
+  }
+
+  const sql = "DELETE FROM recipe WHERE id = ?;";
+  await db.query(sql, [id]);
+
+  return NextResponse.json({ message: "Recipe deleted successfully" });
+}

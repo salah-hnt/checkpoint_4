@@ -1,11 +1,9 @@
-/* Structure générale de la page */
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header sombre et élégant */
 .header {
   padding: 2rem;
   text-align: center;
@@ -40,7 +38,6 @@
   opacity: 0.4;
 }
 
-/* Section image immersive */
 .hero {
   position: relative;
   flex-grow: 1;
@@ -55,7 +52,6 @@
   z-index: 0;
 }
 
-/* Colonne des liens, placée en bas gauche */
 .links {
   position: absolute;
   bottom: 4rem;
@@ -66,7 +62,6 @@
   z-index: 1;
 }
 
-/* Style des liens : fin, élégant, animé */
 .link {
   position: relative;
   font-family: "Cormorant Garamond", serif;
@@ -92,7 +87,6 @@
   width: 100%;
 }
 
-/* Quinconce : léger décalage horizontal */
 .offsetTop {
   margin-left: 1.5rem;
 }
