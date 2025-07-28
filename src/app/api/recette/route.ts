@@ -21,3 +21,24 @@ export async function DELETE(request: Request) {
 
   return NextResponse.json({ message: "Recipe deleted successfully" });
 }
+
+export async function POST(request: Request) {
+  const { name, photo, country, ingredients, instructions } =
+    await request.json();
+
+  if (!name || !photo || !country || !ingredients || !instructions) {
+    return NextResponse.json(
+      { error: "Tous les champs sont requis." },
+      { status: 400 }
+    );
+  }
+
+  const sql = `
+    INSERT INTO recipe (name, photo, country, ingredients, instructions)
+    VALUES (?, ?, ?, ?, ?)
+  `;
+
+  await db.query(sql, [name, photo, country, ingredients, instructions]);
+
+  return NextResponse.json({ message: "Recette créée avec succès." });
+}

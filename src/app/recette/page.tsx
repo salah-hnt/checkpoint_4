@@ -1,6 +1,7 @@
 import styles from "./recette.module.css";
 import { recipeModel } from "@/model/recipeModel";
 import RecetteCard from "@/ui/RecetteCard";
+import AddRecetteForm from "@/ui/AddRecetteForm";
 import Link from "next/link";
 
 const recettes = async () => {
@@ -11,11 +12,15 @@ const recettes = async () => {
   return (
     <main className={styles.container}>
       <h1 className={styles.pageTitle}>Recettes de Café</h1>
+
       <div className={styles.homeButtonContainer}>
         <Link href="/" className={styles.homeButton}>
           Accueil
         </Link>
       </div>
+
+      <AddRecetteForm />
+
       <p className={styles.subtitle}>
         Découvrez nos délicieuses recettes de café.
       </p>
