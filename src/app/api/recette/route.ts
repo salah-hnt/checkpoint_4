@@ -12,7 +12,7 @@ export async function DELETE(request: Request) {
   if (!id) {
     return NextResponse.json(
       { error: "Recipe ID is required" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
   if (!name || !photo || !country || !ingredients || !instructions) {
     return NextResponse.json(
       { error: "Tous les champs sont requis." },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -41,4 +41,25 @@ export async function POST(request: Request) {
   await db.query(sql, [name, photo, country, ingredients, instructions]);
 
   return NextResponse.json({ message: "Recette créée avec succès." });
+}
+
+export async function PUT(request: Request) {
+  const { id, name, photo, country, ingredients, instructions } =
+    await request.json();
+
+  if (!name || !photo || !country || !ingredients || !instructions) {
+    return NextResponse.json(
+      { error: "Tous les champs sont requis." },
+      { status: 400 },
+    );
+  }
+
+  const sql = `
+    UPDATE recipe SET name = ?, photo = ?, country = ?, ingredients = ?, instructions = ?
+    WHERE id =?
+  `;
+
+  await db.query(sql, [name, photo, country, ingredients, instructions, id]);
+
+  return NextResponse.json({ message: "Modification faite avec succès." });
 }

@@ -18,7 +18,7 @@ const Varietes = async () => {
         <a href="/" className={styles.link}>
           Accueil
         </a>
-        <a href="/recette" className={styles.link}>
+        <a href="/recettes" className={styles.link}>
           Recettes
         </a>
       </div>
@@ -29,10 +29,10 @@ const Varietes = async () => {
             varietee.nom === "Arabica"
               ? styles.cardArabica
               : varietee.nom === "Robusta"
-              ? styles.cardRobusta
-              : varietee.nom === "Liberica"
-              ? styles.cardLiberica
-              : styles.cardExcelsa;
+                ? styles.cardRobusta
+                : varietee.nom === "Liberica"
+                  ? styles.cardLiberica
+                  : styles.cardExcelsa;
 
           return (
             <div key={varietee.nom} className={`${styles.card} ${cardStyle}`}>

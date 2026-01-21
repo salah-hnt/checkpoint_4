@@ -31,7 +31,6 @@
   flex-direction: column;
   gap: 4rem;
   width: 100%;
-  max-width: 1000px;
 }
 
 .card {
@@ -42,6 +41,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .card:hover {
